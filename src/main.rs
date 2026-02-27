@@ -19,13 +19,13 @@ struct Args {
 #[derive(Subcommand)]
 enum Commands {
     /// Generate a project from a manifest template
-    Create {
+    Use {
         /// Path to manifest.toml
         #[arg(short, long, default_value = "manifest.toml")]
         manifest_path: String,
 
         /// Directory of the template
-        #[arg(short = 'i', long, default_value = "./")]
+        #[arg(short, long, default_value = "./")]
         input: String,
 
         /// Output directory (prompts if not provided)
@@ -75,7 +75,7 @@ fn init(output: &str) -> Result<()> {
 
 fn main() -> Result<()> {
     match Args::parse().command {
-        Commands::Create { manifest_path, input, output } => create(&manifest_path, &input, output),
+        Commands::Use { manifest_path, input, output } => create(&manifest_path, &input, output),
         Commands::Init { output } => init(&output),
     }
 }
