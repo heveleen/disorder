@@ -10,7 +10,6 @@ anyhow = "1.0.102"
 tera = "1.20.1"
 inquire = "0.9.4"
 walkdir = "2.5.0"
-log = "0.4.29"
 clap = { version = "4.5.60", features = ["derive"] }
 
 [profile.release]

@@ -339,7 +339,6 @@ dependencies = [
  "anyhow",
  "clap",
  "inquire",
- "log",
  "serde",
  "tera",
  "toml",
