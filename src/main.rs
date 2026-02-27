@@ -10,7 +10,7 @@ mod template;
 mod init;
 
 #[derive(Parser)]
-#[command(name = "templator", about = "Tera-based template scaffolder.")]
+#[command(name = "disorder", about = "Tera-based template scaffolder.")]
 struct Args {
     #[command(subcommand)]
     command: Commands,

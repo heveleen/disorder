@@ -17,12 +17,12 @@ Deploy a template:
 - Pass down the manifest file name with the `manifest` flag. If missing, defaults to `manifest.toml`.
 - Pass down the output directory with the `output` flag. If missing, defaults to `./out`.
 
---- 
+### Creating templates
+To scaffold out a template, use the `init` subcommand. It will walk you through making a template, metadata and elements (what actually gets used in the Tera templates).
 
-Create a new template automatically:
-- WIP
+To edit it after, refer to the [template format](#template-format).
 
-## Template format
+### Template format
 This is only useful if you either want to create templates manually or want to inspect existing ones.
 
 ```toml

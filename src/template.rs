@@ -2,9 +2,8 @@ use std::fs;
 use std::path::{Path, PathBuf};
 use walkdir::WalkDir;
 use crate::manifest::ElementValue;
-use anyhow::{anyhow, Context, Result};
+use anyhow::{Context, Result};
 use tera::{Context as TeraContext, Tera};
-use log::warn;
 
 pub fn collect_files(root: &Path, out_path: &Path, manifest_name: &str) -> Vec<(PathBuf, bool)> {
     WalkDir::new(root)
