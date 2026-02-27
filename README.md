@@ -10,19 +10,19 @@ Install via
 cargo install --git https://github.com/heveleen/disorder --locked
 ```
 
----
+### Deploying (using) a template
+Execute `disorder use` in the template directory (where the manifest resides, usually a TOML file called `manifest.toml`).
 
-Deploy a template:
-- Pass down the template directory via the `input` flag. If missing, defaults to the running dir.
-- Pass down the manifest file name with the `manifest` flag. If missing, defaults to `manifest.toml`.
-- Pass down the output directory with the `output` flag. If missing, defaults to `./out`.
+- If the manifest name isn't `manifest.toml`, pass down the manifest file name with the `manifest` argument.
+- If the template directory isn't the current running directory, pass it down via the `input` argument.
+- If you want to change the output directory from `./out`, pass down the `output` argument with the desired directory.
 
---- 
+### Creating templates
+To scaffold out a template, use the `init` subcommand. It will walk you through making a template, metadata and elements (what actually gets used in the Tera templates).
 
-Create a new template automatically:
-- WIP
+To edit it after, refer to the [template format](#template-format).
 
-## Template format
+### Template format
 This is only useful if you either want to create templates manually or want to inspect existing ones.
 
 ```toml
@@ -30,7 +30,7 @@ This is only useful if you either want to create templates manually or want to i
 title = "My Awesome Web App"
 # A short summary of what this template generates
 description = "A full-stack web application with authentication, database, and API routes."
-# Semantic version of this template. Displayed alongside the title and description
+# Version of this template. Displayed alongside the title and description
 version = "1.0.0"
 
 # Each [[elements]] entry defines a single prompt shown to the user during scaffolding.
