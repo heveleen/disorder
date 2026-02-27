@@ -11,7 +11,7 @@ cargo install --git https://github.com/heveleen/disorder --locked
 ```
 
 ### Deploying (using) a template
-Execute `disorder create` in the template directory (where the manifest resides, usually a TOML file called `manifest.toml`).
+Execute `disorder use` in the template directory (where the manifest resides, usually a TOML file called `manifest.toml`).
 
 - If the manifest name isn't `manifest.toml`, pass down the manifest file name with the `manifest` argument.
 - If the template directory isn't the current running directory, pass it down via the `input` argument.
